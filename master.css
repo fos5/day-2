@@ -1,0 +1,18 @@
+div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+div p{
+  font-size: 35px;
+  color: white;
+  padding: 15px;
+  background-color: darkorange;
+}
+div button{
+  padding: 25px 15px;
+  font-size: 20px;
+  }

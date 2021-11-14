@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Color Change</title>
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+    <div class="">
+      <p>Background Color: <span id="displayColorCode">WHITE</span></p>
+      <button type="button" name="button">Click Me</button>
+    </div>
+
+    <script type="text/javascript">
+      const body = document.body;
+      const myColors=['green','teal','blue','lightblue','yellow','orange','indigo'];
+      const colorCode = document.getElementById('displayColorCode');
+      const btn = document.querySelector('button')
+      btn.addEventListener('click', clickMe)
+      function clickMe() {
+        const index=Math.floor(Math.random()*myColors.lenght);
+        body.style.backgroundColor = myColors[index];
+        colorCode.textContent = myColors[index].toLocaleUpperCase();
+        setTimeout(clickMe, 2000);
+      }
+    </script>
+  </body>
+</html>
